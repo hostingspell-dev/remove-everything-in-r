@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #f5f9fc no-repeat;
+  font-family: "Segoe UI", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  word-wrap: normal;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav {
+  position: relative;
+  padding: 10px 25px;
+  background: #0b0d39 no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+.nav .menu-toggler {
+  font-size: 1.3rem;
+  margin-left: 15px;
+  border: none;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+}
+
+.nav .branding {
+  margin-left: 10px;
+}
+
+.nav .branding .brand-title {
+  font-weight: 300px;
+  color: #ffffff;
+}
+
+.nav .help-nav-content {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.nav .help-nav-content .help-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .help-nav-content .help-links a {
+  color: #ffffff;
+}
+
+.nav .extra-view {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .extra-view .app-launcher {
+  margin: 0 30px;
+  width: 20px;
+  height: 20px;
+}
+
+.sub-nav-container {
+  position: relative;
+  width: 100%;
+}
+
+.sub-nav-container .sub-nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5f617d;
+}
+
+.sub-nav-container .sub-nav li {
+  padding: 10px 0;
+}
+
+.sub-nav-container .sub-nav li a {
+  color: #ffffff;
+}
+
+.sub-nav-container .sub-nav li a i {
+  margin-right: 10px;
+}
+
+.bread-container {
+  position: relative;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 20px 0;
+}
+
+.bread-container .breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+.bread-container .breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+
+.bread-container .breadcrumb li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.bread-container .breadcrumb li a:hover {
+  color: #0275d8;
+}
+
+.bread-container .breadcrumb li + li:before {
+  padding: 8px;
+  color: #000;
+  content: ">\003e";
+}
+
+.bread-container .search-form {
+  position: relative;
+  padding: 5px 10px;
+  background: #0f8af9;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.bread-container .search-form .search-btn {
+  padding: 2px 5px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.bread-container .search-form .search-input {
+  margin-left: 2px;
+  color: #ffffff;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+
+.bread-container .search-form .search-input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.bread-container .search-form .search-input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.bread-container .search-form .search-input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.bread-container .search-form .search-input::placeholder {
+  color: #ffffff;
+}
+
+.section-container {
+  position: relative;
+  width: 65%;
+  margin: 10px 15px;
+  padding: 15px 25px;
+  text-align: left;
+  float: left;
+}
+
+.section-container.right {
+  width: 80%;
+  float: left;
+}
+
+.section-container.right .answer-btn {
+  float: right;
+}
+
+.section-container .section-title {
+  color: #1d2d49;
+}
+
+.section-container .code-content {
+  position: relative;
+  width: 90%;
+  margin: 20px 0 10px;
+}
+
+.section-container .code-content figcaption {
+  color: #707070;
+  margin-left: 30px;
+}
+
+.section-container .code-content pre {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.section-container .code-content code {
+  word-break: break-all;
+  line-height: 1;
+  letter-spacing: 1.2px;
+  white-space: pre-line;
+  background: #0b0d39;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.section-container .code-content code.number {
+  padding-left: 40px;
+  margin-right: 5px;
+}
+
+.section-container .code-content code.answer {
+  width: 100%;
+}
+
+.section-container .code-content .answer-btn {
+  margin: 30px 0 5px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  background: #0f8af9;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.section-container .code-content .answer-btn:hover {
+  -webkit-box-shadow: 0 1px 5px 2px #04899883;
+          box-shadow: 0 1px 5px 2px #04899883;
+}
+
+.question-content {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-size: 14px;
+}
+
+.question-content .new-question {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.result-container {
+  position: relative;
+  width: 90%;
+  margin: 10px 15px;
+  padding: 15px 25px;
+}
+
+.related-answer {
+  margin: 10px 0 0 15px;
+  padding: 2px 5px;
+  border: none;
+  outline: none;
+  color: #707070;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.question {
+  margin: 8px 0;
+  color: #1d2d49;
+}
+
+.main-container {
+  position: relative;
+  margin-left: 18%;
+  width: 78%;
+  height: 100%;
+  padding: 10px 30px;
+}
+
+.search-result {
+  position: relative;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.menu-container {
+  position: relative;
+  float: left;
+  width: 18%;
+  height: 100%;
+  background: #9697aa;
+  padding: 10px 0px;
+  margin-right: 5px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-container .login-content {
+  position: relative;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.menu-container .login-content .login-avatar {
+  width: 4.3rem;
+  height: 4.3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+}
+
+.menu-container .login-content .login-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 30px;
+  background: #0b0d39;
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.menu-container .divider {
+  width: 100%;
+}
+
+.menu-container .sub-menu {
+  margin: 10px 0;
+}
+
+.menu-container .sub-menu a {
+  display: block;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+.menu-container .sub-menu a i {
+  margin-right: 10px;
+}
+
+.related-container {
+  position: relative;
+  float: right;
+  width: 30%;
+  margin-right: 10px;
+  padding-right: 25px;
+  text-align: right;
+}
+
+.related-container .aside-title {
+  color: #1d2d49;
+}
+
+.related-container .related-questions {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding: 2px 0;
+}
+
+footer .footer-content {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 10px 60px;
+}
+
+footer .footer-content .footer-title {
+  color: #1d2d49;
+  margin-bottom: 20px;
+}
+
+footer .footer-content .nav-option .nav-item {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+footer .footer-content .nav-option .nav-item a {
+  width: 100%;
+  color: #707070;
+}
+
+footer .footer-content .nav-option .nav-item a i {
+  margin-right: 15px;
+}
+
+footer .footer-content .post-option .recent-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-content .lang-option .form-control {
+  width: 100%;
+  background: #0f8af9;
+  color: #eefeff;
+  padding: 5px;
+}
+
+footer .footer-copyright {
+  position: relative;
+  width: 100%;
+  background-color: #0b0d39;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */
