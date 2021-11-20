@@ -15,19 +15,19 @@
 
 <body>
     <nav class="nav">
-        <button class="menu-toggler fas fa-bars"></button>
+        <button class="menu-toggler fas fa-bars" id="menu-toggle"></button>
         <div class="branding">
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="/" target="_blank" rel="noopener noreferrer" class="brand-content">
+                <img src="/img/logo.png" alt="Grepper" class="logo">
                 <h2 class="brand-title">Grepper</h2>
             </a>
         </div>
-        <!-- <form action="" id="search-form">
-                    <input type="search" name="search" id="search" placeholder="Search">
-                </form> -->
         <div class="extra-view">
-            <span class="search-area">
+            <div class="search-area">
                 <i class="fas fa-search"></i>
-            </span>
+                <input type="search" name="search" id="nav-search" class="nav-search" placeholder="Search">
+            </div>
+            <button class="nav-search-btn fas fa-search"></button>
             <span class="app-content">
                 <img src="https://cdn-icons-png.flaticon.com/512/56/56844.png" alt="" class="app-launcher">
             </span>
@@ -58,20 +58,6 @@
             <li>remove everthing in r</li>
         </ul>
     </div>
-    <aside class="related-container">
-        <h3 class="aside-title">Related Article</h3>
-        <div class="related-questions">
-            <a class="question" href="#">r remove row names</a>
-            <a class="question" href="#">remove rownumbers r</a>
-            <a class="question" href="#">delete all rows that contain a string in R</a>
-            <a class="question" href="#">r remove inf values</a>
-            <a class="question" href="#">r remove all string before : in r data frame</a>
-            <a class="question" href="#">r remove row dataframe</a>
-            <a class="question" href="#">delete variable from environment r</a>
-            <a class="question" href="#">r remove row names</a>
-            <a class="question" href="#">remove rownumbers r</a>
-        </div>
-    </aside>
     <section class="section-container">
         <h2 class="section-title">"remove everthing in r" Code Answer</h2>
         <div class="code-content">
@@ -89,6 +75,20 @@
             <button class="answer-btn">Add a Grepper Answer</button>
         </div>
     </section>
+    <aside class="related-container">
+        <h3 class="aside-title">Related Article</h3>
+        <div class="related-questions">
+            <a class="question" href="#">r remove row names</a>
+            <a class="question" href="#">remove rownumbers r</a>
+            <a class="question" href="#">delete all rows that contain a string in R</a>
+            <a class="question" href="#">r remove inf values</a>
+            <a class="question" href="#">r remove all string before : in r data frame</a>
+            <a class="question" href="#">r remove row dataframe</a>
+            <a class="question" href="#">delete variable from environment r</a>
+            <a class="question" href="#">r remove row names</a>
+            <a class="question" href="#">remove rownumbers r</a>
+        </div>
+    </aside>
     <section class="section-container">
         <h2 class="section-title">What's New</h2>
         <div class="question-content">
@@ -156,7 +156,7 @@
 
 
     <!--My Scripts-->
-    <script src=""></script>
+    <script src="/app/app.js"></script>
 </body>
 
 </html>

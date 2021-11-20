@@ -18,10 +18,11 @@ body {
     height: 100vh;
     background: $grey-bg no-repeat;
     font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
-    word-wrap: normal;
+    // word-wrap: normal;
 }
 img {
     width: 30px;
@@ -30,6 +31,7 @@ img {
 // NAVBAR
 .nav {
     position: relative;
+    width: 100%;
     padding: 10px 25px;
     background: $blue-bg no-repeat;
     display: flex;
@@ -48,10 +50,25 @@ img {
     }
 
     .branding {
-        margin-left: 10px;
-        .brand-title {
-            font-weight: 300px;
-            color: $light-text;
+        .brand-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo {
+                width: 35px;
+                height: 35px;
+                border-radius: 8px;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+            }
+
+            .brand-title {
+                margin-left: 10px;
+                font-weight: 300px;
+                color: $light-text;
+            }
         }
     }
     .help-nav-content {
@@ -71,15 +88,47 @@ img {
     }
 
     .extra-view {
+        position: relative;
         margin-right: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         .app-launcher {
             margin: 0 30px;
             width: 20px;
             height: 20px;
+        }
+        .nav-search-btn{
+            margin-left: 15px;
+            padding: 5px;
+            background: transparent;
+            border-radius: 20px;
+            border: 1px solid $light-text;
+            outline: none;
+            color: $light-text;
+            cursor: pointer;
+        }
+        .search-area {
+            position: absolute;
+            left: -70%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            float: left;
+            border-radius: 50px;
+            background: $light-text;
+            
+            i {
+                color: $success-bg;
+            }
+            .nav-search {
+                margin-left: 8px;
+                border: none;
+                outline: none;
+                color: $success-bg;
+            }
         }
     }
 }
@@ -180,7 +229,7 @@ img {
     float: left;
 
     &.right {
-        width: 80%;
+        width: 90%;
         float: left;
 
         .answer-btn {
@@ -194,7 +243,7 @@ img {
 
     .code-content {
         position: relative;
-        width: 90%;
+        width: 100%;
         margin: 20px 0 10px;
 
         figcaption {
@@ -227,6 +276,7 @@ img {
             }
         }
         .answer-btn {
+            position: relative;
             margin: 30px 0 5px;
             padding: 8px 15px;
             border-radius: 10px;
@@ -237,7 +287,7 @@ img {
             background: $success-bg;
             color: $light-text;
             cursor: pointer;
-            transition: 0.3s linear;
+            transition: all 0.3s linear;
 
             &:hover {
                 box-shadow: 0 1px 5px 2px #04899883;
@@ -278,13 +328,14 @@ img {
 }
 .question {
     margin: 8px 0;
+    display: block;
     color: $dark-text;
 }
 // Main Container
 .main-container {
     position: relative;
     margin-left: 18%;
-    width: 78%;
+    width: 80%;
     height: 100%;
     padding: 10px 30px;
 }
@@ -307,20 +358,41 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.3s linear;
 
     .login-content {
         position: relative;
         margin: 30px 0;
         text-align: center;
 
-        .login-avatar {
-            width: 4.3rem;
-            height: 4.3rem;
-            object-fit: contain;
-            object-position: center;
-            border-radius: 50px;
-            overflow: hidden;
-            border: 1px solid #ffffff;
+        .avatar-stats {
+            position: relative;
+
+            .online-stats {
+                position: absolute;
+                top: 15%;
+                right: 15%;
+                transform: translate(-50%, -50%);
+                display: block;
+                background: red;
+                width: 12px;
+                height: 12px;
+                border-radius: 50px;
+            }
+            .login-avatar {
+                width: 4.3rem;
+                height: 4.3rem;
+                object-fit: contain;
+                object-position: center;
+                border-radius: 50px;
+                overflow: hidden;
+                border: 1px solid #ffffff;
+            }
+        }
+
+        .user-name {
+            margin: 8px 0;
+            color: $light-text;
         }
         .login-btn {
             display: block;
@@ -428,5 +500,76 @@ footer {
         text-align: center;
         padding: 20px 0;
         margin-top: 15px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav {
+        position: relative;
+        padding: 15px 10px;
+        margin-bottom: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            left: 0;
+            top: 100%;
+            background: $blue-bg;
+            // padding: 10px 0;
+        }
+        .search-area {
+            left: -60%;
+        }
+
+        .brand-title {
+            display: none;
+        }
+
+        .app-content,
+        .user-info {
+            display: none;
+        }
+    }
+    .sub-nav-container {
+        display: none;
+    }
+    .section-container {
+        width: 100%;
+        margin: 5px 10px;
+        padding: 10px 20px;
+
+        .code-content {
+            width: 90%;
+        }
+    }
+    .question-content{
+        flex-direction: column;
+    }
+    .related-container {
+        float: left;
+        width: 100%;
+        text-align: left;
+        margin: 10px 20px;
+        padding: 5px 10px;
+
+        .related-questions {
+            align-items: flex-start;
+        }
+    }
+
+
+    footer{
+        width: 100%;
+
+        .footer-content{
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px 30px;
+        }
+        .footer-copyright{
+            font-weight: 400;
+            padding: 15px 20px;
+        }
     }
 }
