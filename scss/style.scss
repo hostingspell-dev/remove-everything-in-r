@@ -124,6 +124,7 @@ img {
         align-items: center;
 
         .app-launcher {
+            filter: invert(1);
             margin: 0 30px;
             width: 20px;
             height: 20px;
