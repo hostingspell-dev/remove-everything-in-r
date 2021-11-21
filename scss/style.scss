@@ -32,13 +32,42 @@ img {
 .nav {
     position: relative;
     width: 100%;
-    padding: 10px 25px;
+    padding: 15px 25px;
     background: $blue-bg no-repeat;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0fr 5fr 1fr 1fr;
+    justify-content: center;
     align-items: center;
     color: #ffffff;
+
+    .nav-search-view{
+        position: relative;
+        
+        .search-area {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            border-radius: 50px;
+            background: $light-text;
+            transition: all 0.3s linear;
+
+            i {
+                color: $success-bg;
+            }
+
+            .nav-search {
+                width: 100%;
+                margin-left: 8px;
+                border: none;
+                outline: none;
+                color: $success-bg;
+            }
+        }
+    }
 
     .menu-toggler {
         font-size: 1.3rem;
@@ -72,8 +101,8 @@ img {
         }
     }
     .help-nav-content {
-        width: 50%;
-        margin: 0 10px;
+        position: relative;
+        float: right;
 
         .help-links {
             list-style: none;
@@ -108,27 +137,6 @@ img {
             outline: none;
             color: $light-text;
             cursor: pointer;
-        }
-        .search-area {
-            position: absolute;
-            left: -70%;
-            transform: translateX(-50%);
-            padding: 5px 10px;
-            display: flex;
-            align-items: center;
-            float: left;
-            border-radius: 50px;
-            background: $light-text;
-            
-            i {
-                color: $success-bg;
-            }
-            .nav-search {
-                margin-left: 8px;
-                border: none;
-                outline: none;
-                color: $success-bg;
-            }
         }
     }
 }
@@ -505,21 +513,25 @@ footer {
 @media only screen and (max-width: 600px) {
     .nav {
         position: relative;
-        padding: 15px 10px;
+        padding: 10px 10px;
         margin-bottom: 30px;
+        grid-template-columns: 1fr 5fr 1fr;
+        justify-content: space-between;
 
-        &::after {
-            content: '';
+        .nav-search-view{
             position: absolute;
             width: 100%;
-            height: 10%;
-            left: 0;
             top: 100%;
+            right: 0;
             background: $blue-bg;
-            // padding: 10px 0;
+            padding: 10px 20px;
+
+            .search-area {
+                width: 100%;
+            }
         }
-        .search-area {
-            left: -60%;
+        .help-nav-content{
+            width: 75%;
         }
 
         .brand-title {
@@ -533,6 +545,18 @@ footer {
     }
     .sub-nav-container {
         display: none;
+    }
+    .bread-container{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        float: left;
+        text-align: left;
+        margin: 10px 20px;
+
+        .search-form{
+            width: 80%;
+        }
     }
     .section-container {
         width: 100%;
@@ -557,7 +581,6 @@ footer {
             align-items: flex-start;
         }
     }
-
 
     footer{
         width: 100%;
